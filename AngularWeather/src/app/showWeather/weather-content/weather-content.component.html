@@ -1,0 +1,11 @@
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle value="today"><a routerLink="today">今天</a></mat-button-toggle>
+  <mat-button-toggle value="week"><a routerLink="week">未來一周天氣</a></mat-button-toggle>
+</mat-button-toggle-group>
+<mat-card class="content">
+  <mat-card-content class="cityTitle">{{ city }}</mat-card-content>
+  <br>
+  <br>
+  <router-outlet></router-outlet>
+  <button (click)="cityWeather()">刷新資料</button>
+</mat-card>

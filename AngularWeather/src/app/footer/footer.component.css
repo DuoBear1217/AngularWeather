@@ -1,0 +1,23 @@
+.footer {
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.goRight {
+  position: absolute;
+  right: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.toTop {
+  color: white;
+  padding: 1em;
+
+}
+
+.topIcon {
+  color: white;
+}

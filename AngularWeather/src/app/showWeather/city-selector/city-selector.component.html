@@ -1,0 +1,27 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>City</mat-label>
+    <input matInput
+           aria-label="State"
+           [matAutocomplete]="auto"
+           [formControl]="stateCtrl"
+           #city>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectCity(city.value)">
+      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+        <span>{{state.name}}</span>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <br>
+
+  <mat-slide-toggle
+    [checked]="stateCtrl.disabled"
+    (change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
+    是否鎖定城市
+  </mat-slide-toggle>
+</form>
+
+<app-weather-content [city]="selectedCity"></app-weather-content>
+
+<!-- <button (click)="getWeather()">測試</button> -->

@@ -1,0 +1,8 @@
+.topBar {
+  position: relative;
+}
+
+.goRight {
+  position: absolute;
+  right: 0;
+}
